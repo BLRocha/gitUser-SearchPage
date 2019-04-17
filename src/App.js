@@ -28,7 +28,7 @@ class App extends Component {
    
       repositories: true,
       starred: false,
-      fallowers: false,
+      followers: false,
       following: false
     }
     this.handleRouter = this.handleRouter.bind(this);
@@ -68,7 +68,7 @@ class App extends Component {
           () => this.setState(
             {
               starred: !this.state.repositories,
-              fallowers: !this.state.repositories,
+              followers: !this.state.repositories,
               following: !this.state.repositories
             }
           )
@@ -79,19 +79,19 @@ class App extends Component {
           () => this.setState(
             {
               repositories: !this.state.starred,
-              fallowers: !this.state.starred,
+              followers: !this.state.starred,
               following: !this.state.starred
             }
           )
         );
         break;
       case 'followers':
-        this.setState({fallowers: true},
+        this.setState({followers: true},
           () => this.setState(
             {
-              repositories: !this.state.fallowers,
-              starred: !this.state.fallowers,
-              following: !this.state.fallowers
+              repositories: !this.state.followers,
+              starred: !this.state.followers,
+              following: !this.state.followers
             }
           )
         );
@@ -102,7 +102,7 @@ class App extends Component {
             {
               repositories: !this.state.following,
               starred: !this.state.following,
-              fallowers: !this.state.following
+              followers: !this.state.following
             }
           )
         );
@@ -189,7 +189,7 @@ class App extends Component {
               }
 
               { // FALLOWERS
-                !!this.state.fallowers && this.state.apiFollowers.map(
+                !!this.state.followers && this.state.apiFollowers.map(
                   value => (
                     <CardProfile
                       key={value.id}
