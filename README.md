@@ -10,8 +10,8 @@
 ### Task List
 - [x] criar estrutura em HTML :white_check_mark:
 - [x] Alterar estrutura para JSX :white_check_mark:
-- [ ] Alterar alguns dumb components para smart components :X:
-- [ ] Adicionar controle para evitar search duplicado *no update* :X:
-- [ ] Refatorar para React-router :X:
-- [ ] Refatorar css e Erros ortograficos :X:
-- [ ] others :X:
+- [ ] Alterar alguns dumb components para smart components :x:
+- [ ] Adicionar controle para evitar search duplicado *no update* :x:
+- [ ] Refatorar para React-router :x:
+- [ ] Refatorar css e Erros ortograficos :x:
+- [ ] others :x:
