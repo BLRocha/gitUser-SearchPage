@@ -1,6 +1,10 @@
 # gitUser-SearchPage  :construction:
 
-##### Efetuar Busca coloque o nome do usuario ex: l217  :mag:
+### :dancers: clone e install packages :package: <code>*npm i*</code> ou <code>*yarn*</code>
+### :truck: run <code>*npm start*</code> ou <code>*yarn start*</code>
+
+
+##### Efetuar Busca insira nome do usuario no campo input search ex: l217  :mag:
 
 
 #### DEMO
@@ -8,10 +12,10 @@
 
 
 ### Task List
-- [x] criar estrutura em HTML :white_check_mark:
-- [x] Alterar estrutura para JSX :white_check_mark:
+- [x] criar estrutura em HTML :heavy_check_mark:
+- [x] Alterar estrutura para JSX :heavy_check_mark:
 - [ ] Alterar alguns dumb components para smart components :x:
 - [ ] Adicionar controle para evitar search duplicado *no update* :x:
-- [ ] Refatorar para React-router :x:
+- [ ] Refatorar incluir React-router :x:
 - [ ] Refatorar css e Erros ortograficos :x:
-- [ ] others :x:
+- [ ] others alteracoes no Design:x:
