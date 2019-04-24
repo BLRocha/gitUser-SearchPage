@@ -9,9 +9,10 @@ import follower from './assets/mokFallowers';
 import followin from './assets/mokFallowing';
 import nav from './assets/dashboardMenu';
 
+import HeaderSearch from './components/headerSearch';
 import User from './components/user';
 import Ul from './components/nav';
-import Cards from './components/cards';
+import CardsRepo from './components/cardsRepo';
 import CardProfile from './components/cardProfile';
 
 class App extends Component {
@@ -35,6 +36,7 @@ class App extends Component {
     this.handleSearch = this.handleSearch.bind(this);
   }
   handleSearch(eventSearch) {
+    console.log('click')
     if (eventSearch.target.nodeName === 'INPUT') {
     const $inpusSerach = document.querySelector('.searchInput').value;
     this.search($inpusSerach);
@@ -112,14 +114,10 @@ class App extends Component {
     }
   }
 
-  
   render() {
     return (
       <Fragment>
-        <div className="staticNav">
-            <input className="searchInput" type="text" placeholder="Search User Github"/>
-            <input type="button" onClick={this.handleSearch} value="Search"/>
-        </div>
+        <HeaderSearch handleSearch={this.handleSearch}/>
 
         <div className="mainContainer">
           
@@ -159,60 +157,28 @@ class App extends Component {
 
             <div className="main-cards">
               { // REPOSITORIES
-               !!this.state.repositories && this.state.apiRepos.map(
-                  value => (
-                    <Cards
-                      key={value.id}
-                      name={value.name}
-                      description={value.description}
-                      href={value.html_url}
-                      language={value.language}
-                      updated_at={value.updated_at}
-                    />
-                  )
-                )
+               !!this.state.repositories && <CardsRepo
+                  cardRepos={this.state.apiRepos}
+                />
               }
               { // STARRED
-                !!this.state.starred && this.state.apiStarred.map(
-                  value => (
-                    <Cards
-                      key={value.id}
-                      name={value.name}
-                      description={value.description}
-                      href={value.html_url}
-                      language={value.language}
-                      updated_at={value.updated_at}
-                    />
-                  )
-                )
+                !!this.state.starred && <CardsRepo
+                  cardRepos={this.state.apiStarred}
+                />
                 // END Repositore and starreds
               }
 
               { // FALLOWERS
-                !!this.state.followers && this.state.apiFollowers.map(
-                  value => (
-                    <CardProfile
-                      key={value.id}
-                      login={value.login}
-                      avatar_url={value.avatar_url}
-                      html_url={value.html_url}
-                      handleSearch={this.handleSearch}
-                    /> 
-                  )
-                )
+                !!this.state.followers && <CardProfile
+                  cardProfile={this.state.apiFollowers}
+                  handleSearch={this.handleSearch}
+                />
               }
               { // FOLLOWING
-                !!this.state.following && this.state.apiFollowing.map(
-                  value => (
-                    <CardProfile
-                      key={value.id}
-                      login={value.login}
-                      avatar_url={value.avatar_url}
-                      html_url={value.html_url}
-                      handleSearch={this.handleSearch}
-                    /> 
-                  )
-                )
+                !!this.state.following && <CardProfile
+                  cardProfile={this.state.apiFollowing}
+                  handleSearch={this.handleSearch}
+                />
               }
             </div>
           </div>
