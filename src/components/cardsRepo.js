@@ -5,7 +5,7 @@ const CardsRepos = ({ cardRepos }) => cardRepos.map( value => (
     <span>
       <a 
         className="cards-link"
-        href={value.href}
+        href={value.html_url}
         alt="git repos"
         children={value.name}
         target="framename"
