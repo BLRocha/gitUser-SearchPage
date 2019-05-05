@@ -1,6 +1,6 @@
 # gitUser-SearchPage  :construction:
 
-### :dancers: clone e install packages :package: <code>*npm i*</code> ou <code>*yarn*</code>
+### :dancers: clone and install packages :package: <code>*npm i*</code> or <code>*yarn*</code>
 ### :truck: run <code>*npm start*</code> ou <code>*yarn start*</code>
 
 
@@ -19,3 +19,4 @@
 - [ ] Refatorar incluir React-router :x:
 - [ ] Refatorar css e Erros ortograficos :x:
 - [ ] others alteracoes no Design:x:
+- [ ] adicionar animacão para o botão search :x:
