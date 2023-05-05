@@ -1,7 +1,7 @@
 # gitUser-SearchPage  :construction:
 
-### :dancers: clone and install packages :package: <code>*npm i*</code> or <code>*yarn*</code>
-### :truck: run <code>*npm start*</code> ou <code>*yarn start*</code>
+### clone and install packages <code>*npm i*</code> or <code>*yarn*</code>
+### run <code>*npm start*</code> ou <code>*yarn start*</code>
 
 
 ##### Efetuar Busca insira nome do usuario no campo input search ex: l217  :mag:
